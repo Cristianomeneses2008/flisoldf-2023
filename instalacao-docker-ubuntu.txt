@@ -1,0 +1,51 @@
+Instalação Docker Ubuntu
+
+  1. Passo - Entre no site
+     https://docs.docker.com/engine/install/ubuntu/
+  2. Passo - Atualiza os pacotes
+     Abra o terminal
+     execute:  sudo apt-get update
+  3. Passo - Dependencias do Docker
+     Abra o terminal
+     execute: sudo apt-get install \ca-certificates \curl \gnupg
+     
+  4. Passo - Comandos Curl
+     Abra o terminal
+     execute: sudo mkdir -m 0755 -p /etc/apt/keyrings
+               curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+   
+  5. Passo - Repositorio pra fazer o download do docker
+     Abra o terminal
+     execute: echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  
+   6. Passo - Atualiza os pacotes
+     Abra o terminal
+     execute:  sudo apt-get update -> 64mb baixados
+     
+   7. Passo - Instala o docker
+     Abra o terminal
+     execute: sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+     
+   8. Passo - Rodando o docker
+     Abra o terminal
+     execute: sudo docker run hello-world  
+     
+   9. Passo - Verificando a version
+     Abra o terminal
+     execute: docker --version
+     
+   10. Passo - executar 
+   Abra o terminal
+     execute: /etc/init.d/docker start        
+     
+     
+     
+     
+     
+     
+     
+     
+     
